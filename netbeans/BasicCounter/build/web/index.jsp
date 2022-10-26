@@ -14,8 +14,15 @@
         <title>JSP Page</title>
     </head>
     <body>
+        <%! int count = 0;%>
+        <%! int doubleCount() {
+                count *= 2;
+                return count;
+            }
+        %>
        <h1><%--out.println(foo.Counter.getCount());--%></h1>
-       <h1><%out.println(Counter.getCount());%></h1>
+       <h1><%--out.println(Counter.getCount());--%></h1>
         <h1><%--Counter.getCount()--%></h1>
+        <h1><%=doubleCount()%></h1>
     </body>
 </html>
